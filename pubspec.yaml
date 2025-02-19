@@ -1,0 +1,102 @@
+name: _appname_
+description: "A base Flutter project."
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  #Cupertino Icons
+  cupertino_icons: ^1.0.8
+
+  #local storage
+  shared_preferences: ^2.2.2
+  flutter_secure_storage: ^9.0.0
+  rx_shared_preferences: ^3.1.0
+
+  #state management
+  bloc: ^9.0.0
+  flutter_bloc: ^9.0.0
+
+  dartx: ^1.2.0
+  result_dart: ^1.1.1
+  path: ^1.9.0
+  intl: ^0.20.2
+
+  #ui
+  oktoast: ^3.3.1
+  flutter_snake_navigationbar: ^0.6.1
+  shimmer: ^3.0.0
+  cached_network_image: ^3.3.1
+  carousel_slider: ^5.0.0
+  smooth_page_indicator: ^1.1.0
+  flutter_easyloading: ^3.0.5
+  sizer: ^3.0.5
+  flutter_screenutil: ^5.9.0
+  asuka: ^2.2.1
+  gap: ^3.0.1
+  popover: ^0.3.1
+  font_awesome_flutter: ^10.8.0
+
+  #navigation
+  auto_route: ^8.0.3
+
+  #dependency injection
+  get_it: ^7.6.8
+  injectable: ^2.4.1
+
+  #access environment variables in .env file
+  flutter_dotenv: ^5.1.0
+
+  #generation models
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.9.0
+
+  #restful API
+  dio: ^5.4.2
+  retrofit: ^4.1.0
+
+  #talker & logger
+  talker_flutter: ^4.1.3
+  talker_bloc_logger: ^4.1.3
+  talker_dio_logger: ^4.6.11
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+  mocktail: ^1.0.4
+  bloc_test: ^10.0.0
+  build_runner: ^2.4.9
+  freezed: ^2.5.3
+  json_serializable: ^6.7.1
+  auto_route_generator: ^8.0.0
+  flutter_gen_runner: ^5.4.0
+  intl_utils: ^2.8.7
+  injectable_generator: ^2.6.1
+  retrofit_generator: ^8.1.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/app_images/
+    - assets/home_images/
+    - ./.env
+
+flutter_gen:
+  output: lib/generated/
+  assets:
+    enabled: true
+    outputs:
+      package_parameter_enabled: false
+      style: dot-delimiter
+  colors:
+    enabled: true
+    inputs:
+      - assets/color/colors.xml
