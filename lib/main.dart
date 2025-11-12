@@ -5,8 +5,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:oktoast/oktoast.dart';
-import 'package:sizer/sizer.dart';
 import 'package:talker_bloc_logger/talker_bloc_logger_observer.dart';
 import 'package:talker_flutter/talker_flutter.dart';
 
@@ -35,22 +33,6 @@ Future<void> main() async {
   }, (error, stack) {
     getIt<Talker>().handle(error, stack);
   });
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return OKToast(
-      child: Sizer(builder: (context, orientation, deviceType) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          builder: EasyLoading.init(),
-        );
-      }),
-    );
-  }
 }
 
 void configLoading() {
